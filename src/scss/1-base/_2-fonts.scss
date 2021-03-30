@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "spartanmedium";
+  src: url("Spartan-Medium.woff2") format("woff2"),
+    url("Spartan-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "spartanbold";
+  src: url("Spartan-Bold.woff2") format("woff2"),
+    url("Spartan-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
