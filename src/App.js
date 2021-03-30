@@ -35,7 +35,6 @@ const breakTablet = 768;
 
 const App = () => {
   const windowWidth = useWindowSize().width;
-  console.log(windowWidth);
 
   return (
     <main className="app">

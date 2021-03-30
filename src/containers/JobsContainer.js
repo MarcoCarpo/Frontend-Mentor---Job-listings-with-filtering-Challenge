@@ -10,18 +10,14 @@ const JobsContainer = () => {
     <section className="jobs-container">
       {jobs.map((job) => {
         const { id } = job;
+
         return (
           <Job
             key={id}
             {...job}
             newJob={job.new}
             jobInfo={[job.postedAt, job.contract, job.location]}
-            jobTablets={[
-              job.role,
-              job.level,
-              [...job.languages],
-              [...job.tools],
-            ]}
+            jobTablets={[job.role, job.level, ...job.languages, ...job.tools]}
           />
         );
       })}

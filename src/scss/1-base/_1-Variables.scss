@@ -10,6 +10,7 @@ $colors: (
   filter-tablets: hsl(180, 31%, 95%),
   dark-grayish-cyan: hsl(180, 8%, 52%),
   very-dark-grayish-cyan: hsl(180, 14%, 20%),
+  white: hsl(0, 0%, 100%),
 );
 
 // Breakpoints
@@ -18,6 +19,13 @@ $break-mobile: 37.5rem;
 $break-tablet: 76.8rem;
 $break-laptop: 102.4rem;
 
-// Box model variablers
+// Other variables
 
-$paddingStandard: 2.5rem;
+$appPadding: 2.5rem;
+$containerPadding: 2rem;
+$shadow: 2px 5px 20px -10px rgba(0, 0, 0, 0.37);
+
+@mixin shadow-border-container() {
+  border-radius: 0.5rem;
+  box-shadow: $shadow;
+}

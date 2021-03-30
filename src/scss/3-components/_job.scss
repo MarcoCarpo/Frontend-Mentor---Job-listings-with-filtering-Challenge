@@ -1,0 +1,101 @@
+.job {
+  position: relative;
+  background: map-get($map: $colors, $key: white);
+  padding: $containerPadding;
+  padding-top: 4rem;
+  margin: 4rem 0;
+  @include shadow-border-container();
+  @include flex(initial, initial, column);
+  gap: 1.8rem;
+
+  &__image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(2.5rem, -50%);
+    width: 5rem;
+  }
+
+  &__upper {
+    @include flex(initial, center);
+    gap: 1.7rem;
+  }
+
+  &__company {
+    font-family: "spartanbold";
+    font-size: 1.3rem;
+    color: map-get($map: $colors, $key: primary);
+  }
+
+  &__new-feat {
+    @include flex(center, center);
+    gap: 1rem;
+  }
+
+  &__feat {
+    font-size: 1rem;
+    color: white;
+    border-radius: 1rem;
+    padding: 0.5rem 0.7rem;
+
+    &--new {
+      background: map-get($map: $colors, $key: primary);
+    }
+
+    &--featured {
+      background: map-get($map: $colors, $key: very-dark-grayish-cyan);
+    }
+  }
+
+  &__position {
+    font-family: "spartanbold";
+    font-size: 1.5rem;
+    color: map-get($map: $colors, $key: very-dark-grayish-cyan);
+  }
+
+  &__info {
+    font-size: 1.3rem;
+    color: map-get($map: $colors, $key: dark-grayish-cyan);
+
+    span {
+      margin: 0 1rem;
+      position: relative;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -1rem;
+        top: 50%;
+        transform: translate(50%, -50%);
+        width: 4px;
+        height: 4px;
+        background: map-get($map: $colors, $key: dark-grayish-cyan);
+        border-radius: 50%;
+      }
+
+      &:last-child::after {
+        display: none;
+      }
+    }
+  }
+
+  &__tablets {
+    border-top: 1px solid map-get($map: $colors, $key: dark-grayish-cyan);
+    padding-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  &__tablet {
+    font-family: "spartanbold";
+    color: map-get($map: $colors, $key: primary);
+    background: map-get($map: $colors, $key: background);
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+}

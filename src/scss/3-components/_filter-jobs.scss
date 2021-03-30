@@ -1,3 +1,5 @@
 .filter-jobs {
-  background: white;
-}
+  background: map-get($map: $colors, $key: white);
+  padding: $containerPadding;
+  @include shadow-border-container();
+};

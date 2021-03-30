@@ -12,7 +12,7 @@ const Job = ({
       <div className="job__image-container">
         <img src={logo} alt={`${company} logo`} />
       </div>
-      <div>
+      <div className="job__upper">
         <h3 className="job__company">{company}</h3>
         <div className="job__new-feat">
           {newJob ? (
