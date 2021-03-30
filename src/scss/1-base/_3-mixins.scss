@@ -1,0 +1,41 @@
+// =========================================
+//                 Mixins
+// =========================================
+
+@mixin flex($justify, $align, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin center-content() {
+  display: grid;
+  place-items: center;
+}
+
+@mixin fullBackground($url) {
+  background-image: url($url);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin linear-font-size($minFont, $maxFont, $minWidth, $maxWidth) {
+  $slope: ($maxFont - $minFont) / ($maxWidth - $minWidth);
+  $yInters: -$minWidth * $slope + $minFont;
+  font-size: clamp(
+    $minFont,
+    calc(#{$yInters} + #{1vw * $slope * 100}),
+    $maxFont
+  );
+}
+
+@mixin linear-size($property, $minFont, $maxFont, $minWidth, $maxWidth) {
+  $slope: ($maxFont - $minFont) / ($maxWidth - $minWidth);
+  $yInters: -$minWidth * $slope + $minFont;
+  #{$property}: clamp(
+    $minFont,
+    calc(#{$yInters} + #{1vw * $slope * 100}),
+    $maxFont
+  );
+}
