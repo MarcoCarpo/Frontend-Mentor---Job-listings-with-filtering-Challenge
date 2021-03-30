@@ -5,7 +5,11 @@
 // Colors
 
 $colors: (
-
+  primary: hsl(180, 29%, 50%),
+  background: hsl(180, 52%, 96%),
+  filter-tablets: hsl(180, 31%, 95%),
+  dark-grayish-cyan: hsl(180, 8%, 52%),
+  very-dark-grayish-cyan: hsl(180, 14%, 20%),
 );
 
 // Breakpoints
@@ -13,3 +17,7 @@ $colors: (
 $break-mobile: 37.5rem;
 $break-tablet: 76.8rem;
 $break-laptop: 102.4rem;
+
+// Box model variablers
+
+$paddingStandard: 2.5rem;

@@ -1,18 +1,23 @@
 import React, { useContext, useReducer } from "react";
 import { reducer } from "./reducer";
+import data from "./data";
+
 const AppContext = React.createContext();
 
-const AppProvider = ({ children }) => {
-  return <AppContext.Provider>{children}</AppContext.Provider>;
+const initialState = {
+  jobs: data,
+  isOk: false,
 };
 
-const initialState = {
-  id: 0,
+const AppProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
+  );
 };
 
 export const useGlobalContext = () => {
-  const { state, dispatch } = useReducer(reducer, initialState);
-
   return useContext(AppContext);
 };
 
