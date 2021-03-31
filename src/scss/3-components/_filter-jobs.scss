@@ -2,4 +2,21 @@
   background: map-get($map: $colors, $key: white);
   padding: $containerPadding;
   @include shadow-border-container();
-};
+  @include flex(space-between, center);
+
+  &__tablets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  &__clear {
+    background: none;
+    font-family: "spartanbold";
+    color: map-get($map: $colors, $key: dark-grayish-cyan);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

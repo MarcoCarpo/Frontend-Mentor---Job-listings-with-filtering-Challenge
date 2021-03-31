@@ -8,7 +8,9 @@ const Job = ({
   logo,
 }) => {
   return (
-    <article className="job">
+    <article
+      className={`job ${newJob && featured ? "job__highlighted" : null}`}
+    >
       <div className="job__image-container">
         <img src={logo} alt={`${company} logo`} />
       </div>

@@ -7,6 +7,11 @@
   @include shadow-border-container();
   @include flex(initial, initial, column);
   gap: 1.8rem;
+  user-select: none;
+
+  &__highlighted {
+    border-left: 0.5rem solid map-get($map: $colors, $key: primary);
+  }
 
   &__image-container {
     position: absolute;
@@ -51,6 +56,10 @@
     font-family: "spartanbold";
     font-size: 1.5rem;
     color: map-get($map: $colors, $key: very-dark-grayish-cyan);
+
+    &:hover {
+      color: map-get($map: $colors, $key: primary);
+    }
   }
 
   &__info {
@@ -97,5 +106,10 @@
     background: map-get($map: $colors, $key: background);
     border-radius: 0.5rem;
     padding: 1rem;
+
+    &:hover {
+      color: map-get($map: $colors, $key: white);
+      background: map-get($map: $colors, $key: primary);
+    }
   }
 }

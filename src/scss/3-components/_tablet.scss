@@ -1,0 +1,23 @@
+.tablet {
+  background: map-get($map: $colors, $key: background);
+  color: map-get($map: $colors, $key: primary);
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+  &__name {
+    padding: 1rem;
+    font-family: "spartanbold", sans-serif;
+  }
+
+  &__delete {
+    padding: 0.7rem;
+    background: map-get($map: $colors, $key: primary);
+
+    &:hover {
+      background: map-get($map: $colors, $key: very-dark-grayish-cyan);
+    }
+  }
+}
