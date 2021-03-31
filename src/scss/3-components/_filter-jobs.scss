@@ -16,7 +16,12 @@
     color: map-get($map: $colors, $key: dark-grayish-cyan);
 
     &:hover {
+      color: map-get($map: $colors, $key: primary);
       text-decoration: underline;
     }
+  }
+
+  @media (min-width: 1024px) {
+    padding: $containerPadding 3.5rem;
   }
 }

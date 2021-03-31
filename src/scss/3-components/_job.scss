@@ -6,7 +6,6 @@
   margin: 4rem 0;
   @include shadow-border-container();
   @include flex(initial, initial, column);
-  gap: 1.8rem;
   user-select: none;
 
   &__highlighted {
@@ -19,9 +18,23 @@
     left: 0;
     transform: translate(2.5rem, -50%);
     width: 5rem;
+
+    @media (min-width: 1024px) {
+      position: initial;
+      top: initial;
+      left: initial;
+      transform: initial;
+      width: 9rem;
+      margin-right: 2rem;
+    }
   }
 
   &__upper {
+    @include flex(initial, initial, column);
+    gap: 1.4rem;
+  }
+
+  &__upper-company {
     @include flex(initial, center);
     gap: 1.7rem;
   }
@@ -40,8 +53,8 @@
   &__feat {
     font-size: 1rem;
     color: white;
-    border-radius: 1rem;
-    padding: 0.5rem 0.7rem;
+    border-radius: 1.4rem;
+    padding: 0.7rem;
 
     &--new {
       background: map-get($map: $colors, $key: primary);
@@ -92,12 +105,24 @@
     }
   }
 
+  &__split {
+    color: map-get($map: $colors, $key: dark-grayish-cyan);
+    margin: 1.5rem 0;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
   &__tablets {
-    border-top: 1px solid map-get($map: $colors, $key: dark-grayish-cyan);
-    padding-top: 1.5rem;
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
+
+    @media (min-width: 1024px) {
+      flex: 1;
+      justify-content: flex-end;
+    }
   }
 
   &__tablet {
@@ -106,10 +131,17 @@
     background: map-get($map: $colors, $key: background);
     border-radius: 0.5rem;
     padding: 1rem;
+    transition: $transition;
 
     &:hover {
       color: map-get($map: $colors, $key: white);
       background: map-get($map: $colors, $key: primary);
     }
+  }
+
+  @media (min-width: 1024px) {
+    padding: $containerPadding 3.5rem;
+    flex-direction: row;
+    align-items: center;
   }
 }

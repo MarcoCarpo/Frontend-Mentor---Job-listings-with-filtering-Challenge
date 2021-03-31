@@ -6,6 +6,8 @@
   font-size: 1.3rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  cursor: pointer;
+  user-select: none;
 
   &__name {
     padding: 1rem;
@@ -15,9 +17,9 @@
   &__delete {
     padding: 0.7rem;
     background: map-get($map: $colors, $key: primary);
-
-    &:hover {
-      background: map-get($map: $colors, $key: very-dark-grayish-cyan);
-    }
+    transition: $transition;
+  }
+  &:hover &__delete {
+    background: map-get($map: $colors, $key: very-dark-grayish-cyan);
   }
 }

@@ -24,6 +24,7 @@ $break-laptop: 102.4rem;
 $appPadding: 2.5rem;
 $containerPadding: 2rem;
 $shadow: 2px 5px 20px -10px rgba(0, 0, 0, 0.37);
+$transition: 0.2s;
 
 @mixin shadow-border-container() {
   border-radius: 0.5rem;
