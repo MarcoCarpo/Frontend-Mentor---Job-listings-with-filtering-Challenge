@@ -1,14 +1,12 @@
-import React, { useEffect } from "react";
-
 import Job from "../components/Job";
 import { useGlobalContext } from "../context";
 
 const JobsContainer = () => {
-  const { jobs } = useGlobalContext();
+  const { filteredList } = useGlobalContext();
 
   return (
     <section className="jobs-container">
-      {jobs.map((job) => {
+      {filteredList.map((job) => {
         const { id } = job;
 
         return (

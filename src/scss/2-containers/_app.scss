@@ -1,5 +1,6 @@
 .app {
   width: 100%;
+  min-height: 100vh;
   background: map-get($map: $colors, $key: background);
   position: relative;
 
@@ -17,6 +18,8 @@
   }
 
   &__content {
+    margin: 0 auto;
+    max-width: 111rem;
     padding: $appPadding;
     padding-top: 12.5rem;
     z-index: 1;

@@ -3,6 +3,11 @@
   padding: $containerPadding;
   @include shadow-border-container();
   @include flex(space-between, center);
+  visibility: hidden;
+
+  &__show {
+    visibility: visible;
+  }
 
   &__tablets {
     display: flex;

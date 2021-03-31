@@ -1,3 +1,5 @@
+import { useGlobalContext } from "../context";
+
 const Job = ({
   company,
   newJob,
@@ -7,6 +9,8 @@ const Job = ({
   jobTablets,
   logo,
 }) => {
+  const { addFilter } = useGlobalContext();
+
   return (
     <article
       className={`job ${newJob && featured ? "job__highlighted" : null}`}
@@ -36,7 +40,11 @@ const Job = ({
       <hr className="job__split" />
       <div className="job__tablets">
         {jobTablets.map((tablet, index) => (
-          <button key={index} className="job__tablet">
+          <button
+            key={index}
+            className="job__tablet"
+            onClick={() => addFilter(tablet)}
+          >
             {tablet}
           </button>
         ))}
